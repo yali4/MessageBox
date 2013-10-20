@@ -1,4 +1,1 @@
-messagebox
-==========
-
-jQuery MessageBox Plugin
+# Examples

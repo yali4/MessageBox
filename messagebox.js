@@ -1,12 +1,12 @@
 /**
- * jQuery MessageBox Plugin Version: 1.0
+ * jQuery MessageBox Plugin
  * Github: http://github.com/yali4/messagebox/
  * Link: http://yalcinceylan.net/messagebox
- * License: MIT <http://opensource.org/licenses/mit-license.php>
  * Copyright: October 2013
  * Creator: Yalçın CEYLAN
  * Github: http://github.com/yali4/
  * Website: http://yalcinceylan.net
+ * License: MIT <http://opensource.org/licenses/mit-license.php>
 */
 
 ;(function($) {
@@ -28,7 +28,7 @@
 			content: 'Description',
 			type: 'information', transaction: 'click',
 			animate : { open: false, close : false },
-			buttons: { confirm: {title:'Continue', style:'confirm'}, cancel: {title:'Cancel', style:'cancel'} },
+			buttons: { confirm: {title:'Continue', style:'continue'}, cancel: {title:'Cancel', style:'cancel'} },
 			style: { modal: 'messagebox-background', dialog: 'messagebox-dialog', content : 'messagebox-content', buttons: 'messagebox-buttons', timeout: 'messagebox-timer' },
 			background: '#000', opacity: '0.8',
 			timeout: { second: false, screen: false },

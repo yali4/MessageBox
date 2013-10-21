@@ -22,7 +22,7 @@
 	};
 
 	$.MessageBox = function(options) {
-	
+
 		var options = $.extend({
 			title: 'Title',
 			content: 'Description',
@@ -35,8 +35,8 @@
 			modalclose: false, usekey: false, delay: false,
 			preventDefault: false, stopPropagation: false,
 			callback: function() {}
-		}, options)
-		
+		}, options);
+
 		var modalbox = {};
 		var clickbox = this;
 		
@@ -154,15 +154,37 @@
 			event = event || window.event;
 			if (options.type=='confirmation' || options.type=='information') {
 				if (event.keyCode==modalKeylist.escape) {
-					event.preventDefault();
+					event.returnValue = false;
+					if (event.preventDefault) {
+						event.preventDefault();
+					}
 					modalbox.response = false;
 					modalbox.removeDialog();
 				}
 				if (event.keyCode==modalKeylist.enter || event.keyCode==modalKeylist.space) {
-					event.preventDefault();
+					event.returnValue = false;
+					if (event.preventDefault) {
+						event.preventDefault();
+					}
 					modalbox.response = true;
 					modalbox.removeDialog();
 				}
+			}
+		}
+		
+		modalbox.addEventListener = function(target,event,callback,useCapture) {
+			if ( typeof target.addEventListener === 'function' ) {
+				target.addEventListener(event,callback,useCapture);
+			} else if ( target.attachEvent ) {
+				target.attachEvent(event,callback,useCapture);
+			}
+		}
+
+		modalbox.removeEventListener = function(target,event,callback,useCapture) {
+			if (typeof target.removeEventListener === 'function') {
+				target.removeEventListener(event,callback,useCapture);
+			} else if ( target.detachEvent ) {
+				target.detachEvent(event,callback,useCapture);
 			}
 		}
 
@@ -170,17 +192,11 @@
 			modalbox.dialog.remove();
 			modalbox.modalBackground.remove();
 			$.fn.MessageBoxactive = false;
-			if ( typeof window.removeEventListener === 'function' ) {
-				window.removeEventListener('resize',modalPosition,false);
-			} else if ( window.detachEvent ) {
-				window.detachEvent('resize',modalPosition,false);
-			}
+			modalbox.removeEventListener(window,'resize',modalPosition,false);
+			modalbox.removeEventListener(window,'onresize',modalPosition,false);
 			if (options.usekey) {
-				if ( typeof document.removeEventListener === 'function' ) {
-					document.removeEventListener('keydown',modalKeydown, false);
-				} else if ( document.detachEvent ) {
-					document.detachEvent('keydown',modalKeydown, false);
-				}
+				modalbox.removeEventListener(document,'keydown',modalKeydown,false);
+				modalbox.removeEventListener(document,'onkeydown',modalKeydown,false);
 			}
 			if (typeof parseInt(options.timeout.second) == 'number' && parseInt(options.timeout.second) > 0) {
 				clearInterval(modalbox.interval);
@@ -278,17 +294,11 @@
 			if ($.fn.MessageBoxactive==false) {
 				$.fn.MessageBoxactive = true;
 				modalbox.createDialog();
-				if ( typeof window.addEventListener === 'function' ) {
-					window.addEventListener('resize',modalPosition,false);
-				} else if ( window.attachEvent ) {
-					window.attachEvent('resize',modalPosition,false);
-				}
+				modalbox.addEventListener(window,'resize',modalPosition,false);
+				modalbox.addEventListener(window,'onresize',modalPosition,false);
 				if (options.usekey) {
-					if ( typeof document.addEventListener === 'function' ) {
-						document.addEventListener('keydown',modalKeydown,false);
-					} else if ( document.attachEvent ) {
-						document.attachEvent('keydown',modalKeydown,false);
-					}
+					modalbox.addEventListener(document,'keydown',modalKeydown,false);
+					modalbox.addEventListener(document,'onkeydown',modalKeydown,false);
 				}
 				if ( typeof parseInt(options.timeout.second) == 'number' && parseInt(options.timeout.second) > 0 ) {
 					modalbox.remaining = parseInt(options.timeout.second);
@@ -339,10 +349,12 @@
 		if (typeof clickbox[options.transaction]==='function') {
 			clickbox[options.transaction](function(event) {
 				if (options.preventDefault) {
-					if (typeof event.preventDefault==='function') { event.preventDefault(); }
+					event.returnValue = false;
+					if (event.preventDefault) { event.preventDefault(); }
 				}
 				if (options.stopPropagation) {
-					if (typeof event.stopPropagation==='function') { event.stopPropagation(); }
+					event.cancelBubble = true;
+					if (event.stopPropagation) { event.stopPropagation(); }
 				}
 				if (typeof clickbox.blur==='function') { clickbox.blur(); }
 				return modalbox.insertDialog();

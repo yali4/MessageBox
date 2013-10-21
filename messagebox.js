@@ -28,19 +28,13 @@
 			content: 'Description',
 			type: 'information', transaction: 'click',
 			animate : { open: false, close : false },
-			buttons: { continue: {title:'Continue', style:'continue'}, cancel: {title:'Cancel', style:'cancel'} },
-			style: {
-				modal: 'MessageBox-modal-background',
-				dialog: 'MessageBox-dialog-background',
-				content : 'MessageBox-dialog-content',
-				buttons: 'MessageBox-dialog-buttons',
-				timeout: 'MessageBox-dialog-timer',
-			},
+			buttons: { confirm: {title:'Continue', style:'confirm'}, cancel: {title:'Cancel', style:'cancel'} },
+			style: { modal: 'messagebox-background', dialog: 'messagebox-dialog', content : 'messagebox-content', buttons: 'messagebox-buttons', timeout: 'messagebox-timer' },
 			background: '#000', opacity: '0.8',
 			timeout: { second: false, screen: false },
 			modalclose: false, usekey: false, delay: false,
 			preventDefault: false, stopPropagation: false,
-			callback: function() {},
+			callback: function() {}
 		}, options)
 		
 		var modalbox = {};
@@ -48,7 +42,7 @@
 		
 		modalbox.createDialog = function() {
 
-			modalbox.modalBackground = $('<div/>', {class:options.style.modal,css:{background:options.background,opacity:options.opacity}});
+			modalbox.modalBackground = $('<div/>', {'class':options.style.modal,css:{background:options.background,opacity:options.opacity}});
 			modalbox.modalBackground.appendTo('body');
 
 			if (options.delay) {
@@ -62,32 +56,32 @@
 				});
 			}
 			
-			modalbox.dialog = $('<div/>', {class:options.style.dialog});
-			modalbox.content = $('<div/>', {class:options.style.content});
+			modalbox.dialog = $('<div/>', {'class':options.style.dialog});
+			modalbox.content = $('<div/>', {'class':options.style.content});
 			modalbox.content.appendTo(modalbox.dialog);
-			modalbox.title = $('<h1/>', {class:'title',html:options.title});
+			modalbox.title = $('<h1/>', {'class':'title',html:options.title});
 			modalbox.title.appendTo(modalbox.content);
-			modalbox.description = $('<div/>', {class:'description',html:options.content});
+			modalbox.description = $('<div/>', {'class':'description',html:options.content});
 			modalbox.description.appendTo(modalbox.content);
-			modalbox.buttons = $('<div/>', {class:options.style.buttons});
+			modalbox.buttons = $('<div/>', {'class':options.style.buttons});
 			modalbox.buttons.appendTo(modalbox.dialog);
 			
 			var modalbuttons = {};
 			
-			if (options.type=='confirm' || options.type=='information') {
-				if (options.buttons.continue.title) {
-					modalbuttons.continue = $('<button/>', {class:options.buttons.continue.style,html:options.buttons.continue.title});
-					modalbuttons.continue.appendTo(modalbox.buttons);
-					modalbuttons.continue.click(function() {
+			if (options.type=='confirmation' || options.type=='information') {
+				if (options.buttons.confirm.title) {
+					modalbuttons.confirm = $('<button/>', {'class':options.buttons.confirm.style,html:options.buttons.confirm.title});
+					modalbuttons.confirm.appendTo(modalbox.buttons);
+					modalbuttons.confirm.click(function() {
 						modalbox.response = true;
 						modalbox.removeDialog();
 					});
 				}
 			}
 			
-			if (options.type=='confirm') {
+			if (options.type=='confirmation') {
 				if (options.buttons.cancel.title) {
-					modalbuttons.cancel = $('<button/>', {class:options.buttons.cancel.style,html:options.buttons.cancel.title});
+					modalbuttons.cancel = $('<button/>', {'class':options.buttons.cancel.style,html:options.buttons.cancel.title});
 					modalbuttons.cancel.appendTo(modalbox.buttons);			
 					modalbuttons.cancel.click(function() {
 						modalbox.response = false;
@@ -143,12 +137,12 @@
 				modalbox.dialog.css({left:modalbox.leftCenter,top:modalbox.topCenter});
 			}
 			
-			modalbox.timeout = $('<div/>', {class:options.style.timeout,css:{'display':'none'}});
+			modalbox.timeout = $('<div/>', {'class':options.style.timeout,css:{'display':'none'}});
 			modalbox.timeout.appendTo(modalbox.buttons);			
 
 		}
 
-		var modalPosition = function(callback) {
+		var modalPosition = function() {
 			modalbox.leftCenter = (document.documentElement.clientWidth-modalbox.dialog.width())*0.50;
 			modalbox.topCenter = (document.documentElement.clientHeight-modalbox.dialog.height())*0.50;
 			modalbox.dialog.stop().animate({left:modalbox.leftCenter,top:modalbox.topCenter});
@@ -158,7 +152,7 @@
 		
 		var modalKeydown = function(event) {
 			event = event || window.event;
-			if (options.type=='confirm' || options.type=='information') {
+			if (options.type=='confirmation' || options.type=='information') {
 				if (event.keyCode==modalKeylist.escape) {
 					event.preventDefault();
 					modalbox.response = false;
@@ -336,7 +330,7 @@
 					},
 					close: function() {
 						modalbox.removeDialog();
-					},
+					}
 				};
 				
 			}

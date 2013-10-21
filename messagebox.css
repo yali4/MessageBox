@@ -138,7 +138,7 @@
 	background: -ms-linear-gradient(top,  rgba(255,204,26,1) 0%,rgba(230,178,0,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,204,26,1) 0%,rgba(230,178,0,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc1a', endColorstr='#e6b200',GradientType=0 );
-	border: 1px solid #b38b00;	
+	border: 1px solid #b38b00;
 }
 .cancel:hover {
 	background: rgb(255,204,26);

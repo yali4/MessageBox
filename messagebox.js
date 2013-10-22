@@ -202,7 +202,7 @@
 				clearInterval(modalbox.interval);
 			}
 			if ( options.callback && typeof options.callback === 'function' ) {
-				options.callback(modalbox.response);
+				options.callback.call(clickbox,modalbox.response);
 			}
 		}
 

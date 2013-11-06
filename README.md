@@ -7,6 +7,22 @@
 - Internet Explorer 7,8,9,10,11
 
 
+## How To Use
+```javascript
+
+$(jQuerySelector).MessageBox(event,[options],callback(response){
+	//supported in the context
+},preventDefault,stopPropagation);
+
+// or
+
+$.MessageBox([options],callback(response){
+	// supported in the context
+});
+
+```
+
+
 ## Default Settings
 ```javascript
 
@@ -25,20 +41,33 @@ usekey = false
 
 ```
 
-## How To Use
+
+## Returning Functions
+
 ```javascript
 
-$(Selector).MessageBox(event,[options],callback(response){
-	//supported in the context
-},preventDefault,stopPropagation);
-
-// or
-
-$.MessageBox([options],callback(response){
+// Create New MessageBox
+MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
 	// supported in the context
 });
 
+// Change Title Function
+MessageBox.title(title);
+
+// Change Content Function
+MessageBox.content(content);
+
+// Hide Function
+MessageBox.hide();
+
+// Show Function
+MessageBox.show();
+
+// Close Function
+MessageBox.close();
+
 ```
+
 
 
 ## Options Parameters
@@ -84,33 +113,6 @@ $.MessageBox([options],callback(response){
 > top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | fadeOut
 
 
-
-## Returning Object Functions
-
-```javascript
-
-// Create New MessageBox
-MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
-	// supported in the context
-});
-
-// Change Title Function
-MessageBox.title(title);
-
-// Change Content Function
-MessageBox.content(content);
-
-// Hide Function
-MessageBox.hide();
-
-// Show Function
-MessageBox.show();
-
-// Close Function
-MessageBox.close();
-
-```
-
 ## Examples
 
 ```javascript
@@ -122,6 +124,7 @@ $('#button1').MessageBox('click',{
 	buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
 },function(response){ });
 ```
+
 ```javascript
 $('#button2').MessageBox('click',{
 	title: 'License',
@@ -131,6 +134,7 @@ $('#button2').MessageBox('click',{
 	buttons: { confirm: {title : 'OK', style : 'continue'} }
 },function(response){ });
 ```
+
 ```javascript
 $('#button3').MessageBox('click',{
 	title: 'Information',
@@ -140,6 +144,7 @@ $('#button3').MessageBox('click',{
 	buttons: { confirm: {title : 'OK', style : 'continue'} }
 },function(response){ });
 ```
+
 ```javascript
 $('#button4').MessageBox('click',{
 	title: 'Alert',
@@ -149,6 +154,7 @@ $('#button4').MessageBox('click',{
 	buttons: { confirm: {title : 'OK', style : 'danger'} }
 },function(response){ });
 ```
+
 ```javascript
 $('#button5').MessageBox('click',{
 	title: 'Tutorial Effect',
@@ -158,6 +164,7 @@ $('#button5').MessageBox('click',{
 	buttons: { confirm: {title : 'CLOSE', style : 'danger'} }
 },function(response){ });
 ```
+
 ```javascript
 $.MessageBox({
 	title: 'Welcome',

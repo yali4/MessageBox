@@ -1,13 +1,13 @@
 ## Demo
-[Go to demo](http://yalcinceylan.net/messagebox/)
+[Click to go to the overview page](http://yalcinceylan.net/messagebox/)
 
 
-# Supported Browsers
+## Supported Browsers
 - Chrome, Safari, Firefox, Opera
 - Internet Explorer 7,8,9,10,11
 
 
-# Default Values
+## Default Values
 ```javascript
 
 // Event
@@ -18,7 +18,7 @@ stopPropagation = false
 
 ```
 
-# How To Use
+## How To Use
 ```javascript
 
 $(selector).MessageBox(eventType,options,callback,preventDefault,stopPropagation);
@@ -30,7 +30,7 @@ $.MessageBox(options,callback);
 ```
 
 
-# Options Parameters
+## Options Parameters
 
 **title**<br>
 > String
@@ -64,7 +64,7 @@ $.MessageBox(options,callback);
 
 
 
-# Effect List
+## Effect List
 
 **Open**<br>
 > top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | topFade | bottomFade
@@ -74,7 +74,7 @@ $.MessageBox(options,callback);
 
 
 
-# Returning Object Functions
+## Returning Object Functions
 
 ```javascript
 
@@ -98,7 +98,7 @@ MessageBox.close();
 
 ```
 
-# Examples
+## Examples
 
 ```javascript
 $('#button1').MessageBox('click',{

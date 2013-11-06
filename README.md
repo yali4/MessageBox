@@ -1,5 +1,8 @@
-## Demo
-[Click to go to the overview page](http://yalcinceylan.net/messagebox/)
+## Features
+- View bugs have been fixed.
+- Brought into line with all browsers.
+- The use of context has become active again.
+- Work has been made more than one message box.
 
 
 ## Supported Browsers
@@ -119,6 +122,8 @@ MessageBox.close();
 
 
 ## Examples
+
+[Click to go to the overview page](http://yalcinceylan.net/messagebox/)
 
 ```javascript
 $('#button1').MessageBox('click',{

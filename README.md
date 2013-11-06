@@ -76,10 +76,10 @@ MessageBox.close();
 <code>String</code>
 
 **content**<br>
-<code>String</code> or <code>HTML</code>
+<code>String</code> <code>HTML</code>
 
 **type**<br>
-<code>confirmation</code> or <code>information</code>
+<code>confirmation</code> <code>information</code>
 
 **animate**<br>
 <code>animate: { open: 'effect', close: 'effect', speed: '500' }</code>
@@ -97,10 +97,10 @@ MessageBox.close();
 <code>timeout: { second : '10', screen: true }</code>
 
 **modalclose**<br>
-<code>true</code> or <code>false</code>
+<code>true</code> <code>false</code>
 
 **usekey**<br>
-<code>true</code> <em>or</em> <code>false</code>
+<code>true</code> <code>false</code>
 
 
 
@@ -108,10 +108,14 @@ MessageBox.close();
 ## Effect List
 
 **Open**<br>
-<code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>topFade</code> <code>bottomFade</code>
+<code>topFade</code> <code>bottomFade</code>
 
 **Close**<br>
-<code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>fadeOut</code>
+<code>fadeOut</code>
+
+**Global**<br>
+<code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code>
+
 
 
 ## Examples

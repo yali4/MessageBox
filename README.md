@@ -6,7 +6,10 @@
 # Default Values
 ```javascript
 
+// Event
 preventDefault = false
+
+// Event
 stopPropagation = false
 
 ```
@@ -34,6 +37,14 @@ $.MessageBox(options,callback);
 - timeout
 - modalclose
 - usekey
+
+
+# Effect List
+Open
+- top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,topFade,bottomFade
+Close
+- top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,fadeOut
+
 
 
 # Returning Object Functions

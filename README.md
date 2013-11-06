@@ -29,8 +29,10 @@ $.MessageBox(options,callback);
 # Options Parameters
 
 **title**<br>
+> String
 
 **content**<br>
+> String or HTML
 
 **type**<br>
 > confirmation | information
@@ -42,10 +44,10 @@ $.MessageBox(options,callback);
 > buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
 
 **background**<br>
-> CSS
+> CSS Code
 
 **opacity**<br>
-> CSS
+> CSS Code
 
 **timeout**<br>
 > timeout: { second : '10', screen: true }
@@ -95,7 +97,6 @@ MessageBox.close();
 # Examples
 
 ```javascript
-
 $('#button1').MessageBox('click',{
 	title: 'Confirmation',
 	content: 'Are you sure?',
@@ -103,7 +104,8 @@ $('#button1').MessageBox('click',{
 	animate: { open: 'topFade', close: 'bottom', speed: '500' },
 	buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
 },function(response){ });
-
+```
+```javascript
 $('#button2').MessageBox('click',{
 	title: 'License',
 	content: 'I have read and understood.',
@@ -111,7 +113,8 @@ $('#button2').MessageBox('click',{
 	animate: { open: 'topRight', close: 'bottomLeft', speed: '500' },
 	buttons: { confirm: {title : 'OK', style : 'continue'} }
 },function(response){ });
-
+```
+```javascript
 $('#button3').MessageBox('click',{
 	title: 'Information',
 	content: 'Information Message',
@@ -119,7 +122,8 @@ $('#button3').MessageBox('click',{
 	animate: { open : 'bottomLeft', close : 'topRight', speed: '500' },
 	buttons: { confirm: {title : 'OK', style : 'continue'} }
 },function(response){ });
-
+```
+```javascript
 $('#button4').MessageBox('click',{
 	title: 'Alert',
 	content: 'You do not have sufficient authority!',
@@ -127,8 +131,8 @@ $('#button4').MessageBox('click',{
 	animate: { open : 'left', close : 'right', speed: '500' },
 	buttons: { confirm: {title : 'OK', style : 'danger'} }
 },function(response){ });
-
-
+```
+```javascript
 $('#button5').MessageBox('click',{
 	title: 'Tutorial Effect',
 	content: 'Coming soon...',
@@ -136,8 +140,8 @@ $('#button5').MessageBox('click',{
 	animate: { open : 'bottomFade', close : 'fadeOut', speed: '500' },
 	buttons: { confirm: {title : 'CLOSE', style : 'danger'} }
 },function(response){ });
-
-
+```
+```javascript
 $.MessageBox({
 	title: 'Welcome',
 	content: 'jQuery MessageBox Plugin',
@@ -158,8 +162,6 @@ $.MessageBox({
 		});
 	}
 });
-
-
 ```
 
 

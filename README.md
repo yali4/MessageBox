@@ -22,6 +22,20 @@ $.MessageBox(options,callback);
 
 ```
 
+
+# Options Parameters
+- title
+- content
+- type
+- animate
+- buttons
+- background
+- opacity
+- timeout
+- modalclose
+- usekey
+
+
 # Returning Object Functions
 
 ```javascript

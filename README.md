@@ -1,5 +1,5 @@
 # Demo
-[Go to Demo Page](yalcinceylan.net/messagebox/)
+[Go to demo](http://yalcinceylan.net/messagebox/)
 
 
 # Supported Browsers

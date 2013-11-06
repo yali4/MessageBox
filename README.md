@@ -1,4 +1,4 @@
-# Demo
+## Demo
 [Go to demo](http://yalcinceylan.net/messagebox/)
 
 

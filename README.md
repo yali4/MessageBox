@@ -72,14 +72,14 @@ MessageBox.close();
 
 ## Options Parameters
 
-**title**<br>
-> String
+**title**<br><br>
+<code>String</code>
 
-**content**<br>
-> String or HTML
+**content**<br><br>
+<code>String or Html</code>
 
-**type**<br>
-> confirmation | information
+**type**<br><br>
+<code>confirmation</code> <code>information</code>
 
 **animate**<br>
 > animate: { open: 'topRight', close: 'bottomLeft', speed: '500' }
@@ -106,11 +106,11 @@ MessageBox.close();
 
 ## Effect List
 
-**Open**<br>
-<code>top</code> | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | topFade | bottomFade
+**Open**<br><br>
+<code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>topFade</code> <code>bottomFade</code>
 
-**Close**<br>
-> top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | fadeOut
+**Close**<br><br>
+<code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>fadeOut</code>
 
 
 ## Examples

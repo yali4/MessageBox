@@ -40,10 +40,12 @@ $.MessageBox(options,callback);
 
 
 # Effect List
-Open
-- top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,topFade,bottomFade
-Close
-- top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,fadeOut
+
+**Open**<br>
+> top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,topFade,bottomFade
+
+**Close**<br>
+> top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,fadeOut
 
 
 

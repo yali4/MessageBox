@@ -27,25 +27,44 @@ $.MessageBox(options,callback);
 
 
 # Options Parameters
-- title
-- content
-- type
-- animate
-- buttons
-- background
-- opacity
-- timeout
-- modalclose
-- usekey
+
+**title**<br>
+
+**content**<br>
+
+**type**<br>
+> confirmation | information
+
+**animate**<br>
+> animate: { open: 'topRight', close: 'bottomLeft', speed: '500' }
+
+**buttons**<br>
+> buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
+
+**background**<br>
+> CSS
+
+**opacity**<br>
+> CSS
+
+**timeout**<br>
+> timeout: { second : '10', screen: true }
+
+**modalclose**<br>
+> true | false
+
+**usekey**<br>
+> true | false
+
 
 
 # Effect List
 
 **Open**<br>
-> top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,topFade,bottomFade
+> top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | topFade | bottomFade
 
 **Close**<br>
-> top,left,right,bottom,topLeft,topRight,bottomLeft,bottomRight,fadeOut
+> top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | fadeOut
 
 
 

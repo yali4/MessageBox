@@ -82,10 +82,10 @@ MessageBox.close();
 <code>confirmation</code> or <code>information</code>
 
 **animate**<br>
-> animate: { open: 'topRight', close: 'bottomLeft', speed: '500' }
+<code>animate: { open: 'effect', close: 'effect', speed: '500' }</code>
 
 **buttons**<br>
-> buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
+<code>buttons: { confirm: {title : 'Continue', style : 'continue'}, cancel: {title:'Cancel', style : 'cancel'} }</code>
 
 **background**<br>
 <code>CSS Background Code</code>
@@ -94,13 +94,13 @@ MessageBox.close();
 <code>CSS Opacity Code</code>
 
 **timeout**<br>
-> timeout: { second : '10', screen: true }
+<code>timeout: { second : '10', screen: true }</code>
 
 **modalclose**<br>
 <code>true</code> or <code>false</code>
 
 **usekey**<br>
-<code>true</code> or <code>false</code>
+<code>true</code> <em>or</em> <code>false</code>
 
 
 

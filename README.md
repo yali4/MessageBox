@@ -29,16 +29,16 @@ $.MessageBox([options],callback(response){
 ## Default Settings
 ```javascript
 
-// Event
+// Target Event
 preventDefault = false
 
-// Event
+// Target Event
 stopPropagation = false
 
-// Modal Close
+// Modal Close Option
 modalclose = false
 
-// Usekey
+// Usekey Option
 usekey = false
 
 
@@ -110,14 +110,15 @@ MessageBox.close();
 
 ## Effect List
 
-**Open**<br>
+**open**<br>
 <code>topFade</code> <code>bottomFade</code>
 
-**Close**<br>
+**close**<br>
 <code>fadeOut</code>
 
-**Global**<br>
+**global**<br>
 <code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code>
+
 
 
 

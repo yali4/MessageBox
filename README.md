@@ -107,7 +107,7 @@ MessageBox.close();
 ## Effect List
 
 **Open**<br>
-> top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | topFade | bottomFade
+<code>top</code> | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | topFade | bottomFade
 
 **Close**<br>
 > top | left | right | bottom | topLeft | topRight | bottomLeft | bottomRight | fadeOut

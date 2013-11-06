@@ -1,5 +1,5 @@
 ## Demo
-[Click to go to the overview page](http://yalcinceylan.net/messagebox/)
+[![Click to go to the overview page](http://yalcinceylan.net/messagebox/)
 
 
 ## Supported Browsers
@@ -7,7 +7,7 @@
 - Internet Explorer 7,8,9,10,11
 
 
-## Default Values
+## Default Settings
 ```javascript
 
 // Event
@@ -16,16 +16,27 @@ preventDefault = false
 // Event
 stopPropagation = false
 
+// Modal Close
+modalclose = false
+
+// Usekey
+usekey = false
+
+
 ```
 
 ## How To Use
 ```javascript
 
-$(selector).MessageBox(eventType,options,callback,preventDefault,stopPropagation);
+$(Selector).MessageBox(event,[options],callback(response){
+	//supported in the context
+},preventDefault,stopPropagation);
 
 // or
 
-$.MessageBox(options,callback);
+$.MessageBox([options],callback(response){
+	// supported in the context
+});
 
 ```
 
@@ -79,21 +90,23 @@ $.MessageBox(options,callback);
 ```javascript
 
 // Create New MessageBox
-MessageBox = $.MessageBox({title:'Example',content:'Tutorial'},function(response){ });
+MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
+	// supported in the context
+});
 
-// Change Title
+// Change Title Function
 MessageBox.title(title);
 
-// Change Content
+// Change Content Function
 MessageBox.content(content);
 
-// Hide
+// Hide Function
 MessageBox.hide();
 
-// Show
+// Show Function
 MessageBox.show();
 
-// Close
+// Close Function
 MessageBox.close();
 
 ```

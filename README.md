@@ -1,4 +1,4 @@
-## Features
+## Changelog
 - View bugs have been fixed.
 - Brought into line with all browsers.
 - The use of context has become active again.

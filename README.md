@@ -72,14 +72,14 @@ MessageBox.close();
 
 ## Options Parameters
 
-**title**<br><br>
+**title**<br>
 <code>String</code>
 
-**content**<br><br>
-<code>String or Html</code>
+**content**<br>
+<code>String</code> or <code>HTML</code>
 
-**type**<br><br>
-<code>confirmation</code> <code>information</code>
+**type**<br>
+<code>confirmation</code> or <code>information</code>
 
 **animate**<br>
 > animate: { open: 'topRight', close: 'bottomLeft', speed: '500' }
@@ -88,28 +88,29 @@ MessageBox.close();
 > buttons: { confirm: {title : 'CONTINUE', style : 'continue'}, cancel: {title:'CANCEL', style : 'cancel'} }
 
 **background**<br>
-> CSS Code
+<code>CSS Background Code</code>
 
 **opacity**<br>
-> CSS Code
+<code>CSS Opacity Code</code>
 
 **timeout**<br>
 > timeout: { second : '10', screen: true }
 
 **modalclose**<br>
-> true | false
+<code>true</code> or <code>false</code>
 
 **usekey**<br>
-> true | false
+<code>true</code> or <code>false</code>
+
 
 
 
 ## Effect List
 
-**Open**<br><br>
+**Open**<br>
 <code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>topFade</code> <code>bottomFade</code>
 
-**Close**<br><br>
+**Close**<br>
 <code>top</code> <code>left</code> <code>right</code> <code>bottom</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>fadeOut</code>
 
 

@@ -1,3 +1,14 @@
+/**
+ * jQuery MessageBox Plugin
+ * Github: http://github.com/yali4/messagebox/
+ * Link: http://yalcinceylan.net/messagebox
+ * Copyright: October 2013
+ * Creator: Yalçın CEYLAN
+ * Github: http://github.com/yali4/
+ * Website: http://yalcinceylan.net
+ * License: MIT <http://opensource.org/licenses/mit-license.php>
+*/
+
 .messagebox-background {
 	position:fixed;
 	display:none;
@@ -48,9 +59,9 @@
 	font-weight:bold;
 }
 
-.cancel,
-.continue,
-.danger {
+.messagebox-buttons .cancel,
+.messagebox-buttons .continue,
+.messagebox-buttons .danger {
 	position:relative;
 	display:inline-block;
 	height:25px; line-height:25px;
@@ -61,7 +72,7 @@
 	outline:0; cursor:pointer;
 }
 
-.continue {
+.messagebox-buttons .continue {
 	color:#FFF;
 	background: rgb(77,114,166);
 	background: -moz-linear-gradient(top, rgba(77,114,166,1) 0%, rgba(61,90,132,1) 100%);
@@ -73,7 +84,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d72a6', endColorstr='#3d5a84',GradientType=0 );
 	border: 1px solid #2d4261;
 }
-.continue:hover {
+.messagebox-buttons .continue:hover {
 	background: rgb(77,114,166);
 	background: -moz-linear-gradient(top,  rgba(77,114,166,1) 1%, rgba(40,74,122,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(77,114,166,1)), color-stop(100%,rgba(40,74,122,1)));
@@ -83,7 +94,7 @@
 	background: linear-gradient(to bottom,  rgba(77,114,166,1) 1%,rgba(40,74,122,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d72a6', endColorstr='#284a7a',GradientType=0 );
 }
-.continue:active {
+.messagebox-buttons .continue:active {
 	background: rgb(77,114,166);
 	background: -moz-linear-gradient(top,  rgba(77,114,166,1) 1%, rgba(85,116,160,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(77,114,166,1)), color-stop(100%,rgba(85,116,160,1)));
@@ -95,7 +106,7 @@
 }
 
 
-.danger {
+.messagebox-buttons .danger {
 	color:#FFF;
 	background: rgb(224,45,81);
 	background: -moz-linear-gradient(top,  rgba(224,45,81,1) 0%, rgba(160,27,49,1) 100%);
@@ -107,7 +118,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e02d51', endColorstr='#a01b31',GradientType=0 );
 	border: 1px solid #B11029;
 }
-.danger:hover {
+.messagebox-buttons .danger:hover {
 	background: rgb(224,45,81);
 	background: -moz-linear-gradient(top,  rgba(224,45,81,1) 0%, rgba(144,20,41,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,45,81,1)), color-stop(100%,rgba(144,20,41,1)));
@@ -117,7 +128,7 @@
 	background: linear-gradient(to bottom,  rgba(224,45,81,1) 0%,rgba(144,20,41,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e02d51', endColorstr='#901429',GradientType=0 );
 }
-.danger:active {
+.messagebox-buttons .danger:active {
 	background: rgb(224,45,81);
 	background: -moz-linear-gradient(top,  rgba(224,45,81,1) 0%, rgba(185,43,67,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,45,81,1)), color-stop(100%,rgba(185,43,67,1)));
@@ -129,7 +140,7 @@
 }
 
 
-.cancel {
+.messagebox-buttons .cancel {
 	color:#000;
 	background: rgb(255,204,26);
 	background: -moz-linear-gradient(top,  rgba(255,204,26,1) 0%, rgba(230,178,0,1) 100%);
@@ -141,7 +152,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc1a', endColorstr='#e6b200',GradientType=0 );
 	border: 1px solid #b38b00;
 }
-.cancel:hover {
+.messagebox-buttons .cancel:hover {
 	background: rgb(255,204,26);
 	background: -moz-linear-gradient(top,  rgba(255,204,26,1) 0%, rgba(218,168,0,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,204,26,1)), color-stop(100%,rgba(218,168,0,1)));
@@ -151,7 +162,7 @@
 	background: linear-gradient(to bottom,  rgba(255,204,26,1) 0%,rgba(218,168,0,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc1a', endColorstr='#daa800',GradientType=0 );
 }
-.cancel:active {
+.messagebox-buttons .cancel:active {
 	background: rgb(255,204,26);
 	background: -moz-linear-gradient(top,  rgba(255,204,26,1) 0%, rgba(235,188,30,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,204,26,1)), color-stop(100%,rgba(235,188,30,1)));

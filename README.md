@@ -14,13 +14,13 @@
 ```javascript
 
 $(jQuerySelector).MessageBox(event,[options],callback(response){
-	//supported in the context
+	//supported in the context (selected element)
 },preventDefault,stopPropagation);
 
 // or
 
 $.MessageBox([options],callback(response){
-	// supported in the context
+	// not supported in the context
 });
 
 ```

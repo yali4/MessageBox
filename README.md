@@ -14,13 +14,17 @@
 ```javascript
 
 $(jQuerySelector).MessageBox(event,[options],callback(response){
-	//supported in the context (selected element)
+
+	// supported in the context (selected element)
+
 },preventDefault,stopPropagation);
 
 // or
 
 $.MessageBox([options],callback(response){
+
 	// not supported in the context
+
 });
 
 ```
@@ -51,7 +55,7 @@ usekey = false
 
 // Create New MessageBox
 MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
-	// supported in the context
+	// not supported in the context
 });
 
 // Change Title Function

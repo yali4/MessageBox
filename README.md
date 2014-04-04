@@ -49,7 +49,7 @@ usekey = false
 ```
 
 
-## Returning Functions
+## Methods
 
 ```javascript
 
@@ -77,7 +77,7 @@ MessageBox.close();
 
 
 
-## Options Parameters
+## Options
 
 **title**<br>
 <code>String</code>
@@ -112,7 +112,7 @@ MessageBox.close();
 
 
 
-## Effect List
+## Effects
 
 **open**<br>
 <code>topFade</code> <code>bottomFade</code>

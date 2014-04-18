@@ -1,8 +1,8 @@
 ## Changelog (Değişiklikler)
-- View bugs have been fixed.
-- Brought into line with all browsers.
-- The use of context has become active again.
-- Work has been made more than one message box.
+- View bugs have been fixed. (Görünüm sorunları giderildi.)
+- Brought into line with all browsers. (Tüm tarayıcılar için uyumlu hale getirildi.)
+- The use of context has become active again. (Bağlam kullanımı yeniden aktifleştirildi.)
+- Work has been made more than one message box. (Birden fazla mesaj kutusu açılabilir oldu.)
 
 
 ## Supported Browsers (Desteklenen Tarayıcılar)
@@ -15,17 +15,15 @@
 
 $(jQuerySelector).MessageBox(event,[options],callback(response){
 
-	// supported in the context (selected element)
-	// bağlam desteklenir (seçilmiş eleman)
+	// supported in the context (bağlam desteklenir)
 
 },preventDefault,stopPropagation);
 
-// or
+// or (ya da)
 
 $.MessageBox([options],callback(response){
 
-	// not supported in the context
-	// bağlam desteklenmez
+	// not supported in the context (bağlam desteklenmez)
 
 });
 
@@ -35,16 +33,16 @@ $.MessageBox([options],callback(response){
 ## Default Settings (Varsayılan Ayarlar)
 ```javascript
 
-// Target Event
+// Context is Supported (Bağlam Desteklendiğinde)
 preventDefault = false
 
-// Target Event
+// Context is Supported (Bağlam Desteklendiğinde)
 stopPropagation = false
 
-// Modal Close Option
+// Modal Close Option (Arkaplan Tıklanınca Kapanma)
 modalclose = false
 
-// Usekey Option
+// Usekey Option (Tuş Kullanım Ayarı)
 usekey = false
 
 
@@ -55,31 +53,24 @@ usekey = false
 
 ```javascript
 
-// Create New MessageBox
-// Yeni bir MessageBox oluşturalım
+// Create New MessageBox (Yeni bir MessageBox oluşturalım)
 MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
-	// not supported in the context
-	// bağlam desteklenmiyor
+	// not supported in the context (bağlam desteklenmiyor)
 });
 
-// Change Title Function
-// Başlığı Değiştirme Fonksiyonu
+// Change Title Function (Başlığı Değiştirme Fonksiyonu)
 MessageBox.title(title);
 
-// Change Content Function
-// İçeriği Değiştirme Fonksiyonu
+// Change Content Function (İçeriği Değiştirme Fonksiyonu)
 MessageBox.content(content);
 
-// Hide Function
-// Gizleme Fonksiyonu
+// Hide Function (Gizleme Fonksiyonu)
 MessageBox.hide();
 
-// Show Function
-// Gösterme Fonksiyonu
+// Show Function (Gösterme Fonksiyonu)
 MessageBox.show();
 
-// Close Function
-// Kapatma Fonksiyonu
+// Close Function (Kapatma Fonksiyonu)
 MessageBox.close();
 
 ```

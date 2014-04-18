@@ -1,21 +1,22 @@
-## Changelog
+## Changelog (Değişiklikler)
 - View bugs have been fixed.
 - Brought into line with all browsers.
 - The use of context has become active again.
 - Work has been made more than one message box.
 
 
-## Supported Browsers
+## Supported Browsers (Desteklenen Tarayıcılar)
 - Chrome, Safari, Firefox, Opera
 - Internet Explorer 7,8,9,10,11
 
 
-## How To Use
+## How to Use? (Nasıl Kullanılır?)
 ```javascript
 
 $(jQuerySelector).MessageBox(event,[options],callback(response){
 
 	// supported in the context (selected element)
+	// bağlam desteklenir (seçilmiş eleman)
 
 },preventDefault,stopPropagation);
 
@@ -24,13 +25,14 @@ $(jQuerySelector).MessageBox(event,[options],callback(response){
 $.MessageBox([options],callback(response){
 
 	// not supported in the context
+	// bağlam desteklenmez
 
 });
 
 ```
 
 
-## Default Settings
+## Default Settings (Varsayılan Ayarlar)
 ```javascript
 
 // Target Event
@@ -49,35 +51,42 @@ usekey = false
 ```
 
 
-## Methods
+## Methods (Metotlar)
 
 ```javascript
 
 // Create New MessageBox
+// Yeni bir MessageBox oluşturalım
 MessageBox = $.MessageBox({title:'Title',content:'Content'},function(response){
 	// not supported in the context
+	// bağlam desteklenmiyor
 });
 
 // Change Title Function
+// Başlığı Değiştirme Fonksiyonu
 MessageBox.title(title);
 
 // Change Content Function
+// İçeriği Değiştirme Fonksiyonu
 MessageBox.content(content);
 
 // Hide Function
+// Gizleme Fonksiyonu
 MessageBox.hide();
 
 // Show Function
+// Gösterme Fonksiyonu
 MessageBox.show();
 
 // Close Function
+// Kapatma Fonksiyonu
 MessageBox.close();
 
 ```
 
 
 
-## Options
+## Options (Ayarlar)
 
 **title**<br>
 <code>String</code>
@@ -112,7 +121,7 @@ MessageBox.close();
 
 
 
-## Effects
+## Effects (Efektler)
 
 **open**<br>
 <code>topFade</code> <code>bottomFade</code>
@@ -126,9 +135,9 @@ MessageBox.close();
 
 
 
-## Examples
+## Examples (Örnekler)
 
-[Click to go to the overview page](http://yalcinceylan.net/messagebox/)
+[Click to go to the overview page](http://yalcinceylan.net/messagebox/) (Tanıtım sayfası için tıklayın)
 
 ```javascript
 $('#button1').MessageBox('click',{
